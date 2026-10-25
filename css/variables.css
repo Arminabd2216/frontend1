@@ -1,0 +1,63 @@
+:root {
+  color-scheme: light;
+  --color-page: #F7F3EC;
+  --color-surface: #FFFCF7;
+  --color-surface-muted: #EEE5D9;
+  --color-surface-soft: #F3EDE4;
+  --color-espresso: #403028;
+  --color-coffee: #684A39;
+  --color-sage: #66765F;
+  --color-sage-soft: #E4EADF;
+  --color-terracotta: #A85F49;
+  --color-terracotta-soft: #F1E0D7;
+  --color-text: #332C27;
+  --color-text-muted: #756A61;
+  --color-border: #DED3C5;
+  --color-border-strong: #C9BAA8;
+  --color-success: #496B4D;
+  --color-success-soft: #E5EEE3;
+  --color-warning: #79551F;
+  --color-warning-soft: #F5EBD5;
+  --color-danger: #923E35;
+  --color-danger-soft: #F5E3DF;
+  --color-info: #456674;
+  --color-info-soft: #E3EDF0;
+  --color-focus: #8A5B3D;
+
+  --font-body: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-heading: Georgia, "Times New Roman", serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-page: 1.875rem;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-card: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-pill: 999px;
+
+  --shadow-soft: 0 5px 22px rgb(64 48 40 / 5%);
+  --shadow-raised: 0 10px 30px rgb(64 48 40 / 8%);
+  --focus-ring: 0 0 0 3px rgb(138 91 61 / 30%);
+  --transition-fast: 140ms ease;
+  --transition-medium: 200ms ease;
+
+  --sidebar-width: 16.5rem;
+  --content-max: 94rem;
+  --header-height: 5rem;
+}

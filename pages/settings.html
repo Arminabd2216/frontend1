@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F7F3EC">
+  <meta name="description" content="A sample settings layout with native form controls and clearly documented static behavior.">
+  <title>Settings | Armin Cafe</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="app-layout">
+    <aside class="sidebar" aria-label="Application sidebar">
+      <a class="brand" href="../index.html" aria-label="Armin Cafe dashboard">
+      <span class="brand__mark" aria-hidden="true"><span></span><span></span></span>
+      <span class="brand__wordmark"><strong>Armin Cafe</strong><small>Thoughtful daily service</small></span>
+    </a>
+      <nav class="sidebar__nav" aria-label="Main navigation"><p class="nav-group-label">OVERVIEW</p>
+<ul class="nav-list">
+<li><a class="sidebar__link" href="../index.html"><span class="nav-mark" aria-hidden="true">D</span><span>Dashboard</span></a></li>
+</ul>
+<p class="nav-group-label">CAFE OPERATIONS</p>
+<ul class="nav-list">
+<li><a class="sidebar__link" href="orders.html"><span class="nav-mark" aria-hidden="true">O</span><span>Orders</span></a></li>
+<li><a class="sidebar__link" href="menu.html"><span class="nav-mark" aria-hidden="true">M</span><span>Menu</span></a></li>
+<li><a class="sidebar__link" href="inventory.html"><span class="nav-mark" aria-hidden="true">I</span><span>Inventory</span></a></li>
+<li><a class="sidebar__link" href="reservations.html"><span class="nav-mark" aria-hidden="true">R</span><span>Reservations</span></a></li>
+</ul>
+<p class="nav-group-label">CUSTOMERS</p>
+<ul class="nav-list">
+<li><a class="sidebar__link" href="customers.html"><span class="nav-mark" aria-hidden="true">C</span><span>Customers</span></a></li>
+</ul>
+<p class="nav-group-label">INSIGHTS</p>
+<ul class="nav-list">
+<li><a class="sidebar__link" href="reports.html"><span class="nav-mark" aria-hidden="true">R</span><span>Reports</span></a></li>
+</ul>
+<p class="nav-group-label">SYSTEM</p>
+<ul class="nav-list">
+<li><a class="sidebar__link" href="notifications.html"><span class="nav-mark" aria-hidden="true">N</span><span>Notifications</span></a></li>
+<li><a class="sidebar__link sidebar__link--active" href="settings.html" aria-current="page"><span class="nav-mark" aria-hidden="true">S</span><span>Settings</span></a></li>
+</ul></nav>
+      <div class="sidebar__footer"><span class="sidebar__footer-mark" aria-hidden="true">A</span><div><strong>Armin Cafe</strong><small>Static frontend demo</small></div></div>
+    </aside>
+    <div class="app-shell">
+      <header class="topbar">
+      <div class="topbar__context"><span class="eyebrow">ARMIN CAFE / ADMIN</span><span class="topbar__divider" aria-hidden="true">/</span><span class="topbar__page">Settings</span></div>
+      <div class="topbar__tools">
+        <a class="topbar__notification" href="notifications.html" aria-label="View notifications"><span class="notification-dot" aria-hidden="true"></span><span>Notifications</span></a>
+        <div class="profile-chip"><span class="profile-avatar" aria-hidden="true">AC</span><span class="profile-copy"><strong>Cafe Manager</strong><small>Demo account</small></span></div>
+      </div>
+      <details class="mobile-nav">
+        <summary><span class="mobile-nav__icon" aria-hidden="true"><span></span><span></span><span></span></span><span>Navigation</span></summary>
+        <nav aria-label="Mobile navigation"><p class="nav-group-label">OVERVIEW</p>
+<ul class="nav-list">
+<li><a class="sidebar__link" href="../index.html"><span class="nav-mark" aria-hidden="true">D</span><span>Dashboard</span></a></li>
+</ul>
+<p class="nav-group-label">CAFE OPERATIONS</p>
+<ul class="nav-list">
+<li><a class="sidebar__link" href="orders.html"><span class="nav-mark" aria-hidden="true">O</span><span>Orders</span></a></li>
+<li><a class="sidebar__link" href="menu.html"><span class="nav-mark" aria-hidden="true">M</span><span>Menu</span></a></li>
+<li><a class="sidebar__link" href="inventory.html"><span class="nav-mark" aria-hidden="true">I</span><span>Inventory</span></a></li>
+<li><a class="sidebar__link" href="reservations.html"><span class="nav-mark" aria-hidden="true">R</span><span>Reservations</span></a></li>
+</ul>
+<p class="nav-group-label">CUSTOMERS</p>
+<ul class="nav-list">
+<li><a class="sidebar__link" href="customers.html"><span class="nav-mark" aria-hidden="true">C</span><span>Customers</span></a></li>
+</ul>
+<p class="nav-group-label">INSIGHTS</p>
+<ul class="nav-list">
+<li><a class="sidebar__link" href="reports.html"><span class="nav-mark" aria-hidden="true">R</span><span>Reports</span></a></li>
+</ul>
+<p class="nav-group-label">SYSTEM</p>
+<ul class="nav-list">
+<li><a class="sidebar__link" href="notifications.html"><span class="nav-mark" aria-hidden="true">N</span><span>Notifications</span></a></li>
+<li><a class="sidebar__link sidebar__link--active" href="settings.html" aria-current="page"><span class="nav-mark" aria-hidden="true">S</span><span>Settings</span></a></li>
+</ul></nav>
+      </details>
+    </header>
+      <main id="main-content" class="main-content">
+        <div class="page-heading">
+          <div><p class="eyebrow">SYSTEM</p><h1>Settings</h1><p class="page-heading__description">A sample settings layout with native form controls and clearly documented static behavior.</p></div>
+          <span class="demo-pill"><span aria-hidden="true"></span> Static demo</span>
+        </div>
+        <div class="demo-notice" role="note"><span class="demo-notice__mark" aria-hidden="true">i</span><p><strong>Demonstration data.</strong> Figures and records are fictional examples and do not update or save.</p></div>
+        <div class="settings-layout">
+<section class="section-card settings-section"><div class="section-card__header"><div><h2>Cafe information</h2><p>Example business details for the interface</p></div></div>
+<form class="settings-form" id="demo-settings"><div class="form-grid"><div class="form-field"><label for="cafe-name">Business name</label><input id="cafe-name" name="cafe-name" type="text" value="Armin Cafe" required maxlength="80"><small>Displayed as the demo brand.</small></div><div class="form-field"><label for="contact-email">Contact email</label><input id="contact-email" name="contact-email" type="email" value="hello@example.com" required><small>Uses a reserved example.com address.</small></div><div class="form-field"><label for="cafe-location">Location label</label><input id="cafe-location" name="cafe-location" type="text" value="City Centre" maxlength="80"></div><div class="form-field"><label for="opening-hours">Opening hours</label><input id="opening-hours" name="opening-hours" type="text" value="08:00–18:00, daily" maxlength="80"></div></div>
+<fieldset class="form-fieldset"><legend>Display preferences</legend><div class="form-field"><label for="currency">Sample currency</label><select id="currency" name="currency"><option selected>EUR — Euro</option><option>GBP — Pound sterling</option><option>USD — US dollar</option></select></div><div class="form-field"><label for="time-format">Time format</label><select id="time-format" name="time-format"><option selected>24-hour clock</option><option>12-hour clock</option></select></div></fieldset>
+<fieldset class="form-fieldset"><legend>Notification preferences (visual example)</legend><label class="check-field"><input type="checkbox" name="order-notifications" checked><span><strong>Order updates</strong><small>Example preference only</small></span></label><label class="check-field"><input type="checkbox" name="inventory-notifications" checked><span><strong>Low-stock reminders</strong><small>Example preference only</small></span></label><label class="check-field"><input type="checkbox" name="reservation-notifications"><span><strong>Reservation reminders</strong><small>Example preference only</small></span></label></fieldset>
+<div class="form-actions"><button class="button button--secondary" type="reset">Reset form</button><span class="form-help">No save or submit action is provided.</span></div></form></section>
+<aside class="settings-aside"><section class="section-card settings-aside-card"><span class="settings-aside-card__mark" aria-hidden="true">A</span><h2>About this demo</h2><p>Armin Cafe is a static frontend prototype built with semantic HTML and external CSS.</p><dl class="details-list"><div><dt>Technology</dt><dd>HTML5 + CSS3</dd></div><div><dt>JavaScript</dt><dd>Not used</dd></div><div><dt>Data storage</dt><dd>None</dd></div><div><dt>Current appearance</dt><dd>Warm light theme</dd></div></dl></section><section class="notice-card"><span class="notice-card__label">Important</span><h2>Changes are not saved</h2><p>These native controls demonstrate form layout and browser validation. Values remain local to the open page and are not transmitted or persisted.</p></section></aside>
+</div>
+        <footer class="page-footer"><span>© 2026 Armin Cafe · Frontend demonstration</span><a href="404.html">Not found page</a></footer>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

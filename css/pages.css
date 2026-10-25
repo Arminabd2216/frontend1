@@ -1,0 +1,20 @@
+/* Page-specific layout adjustments stay separate from reusable components. */
+#main-content > .section-card + .section-card {
+  margin-top: var(--space-5);
+}
+
+#main-content > .section-card--table {
+  margin-top: 0;
+}
+
+#main-content > .section-card--table + .page-note {
+  margin-top: var(--space-4);
+}
+
+#main-content > .report-chart-card {
+  margin-bottom: var(--space-5);
+}
+
+#main-content > .settings-layout + .page-note {
+  max-width: 70ch;
+}
