@@ -2,12 +2,12 @@
             CSS Variables & Reset
 ------------------------------------------------ */
 :root {
-    --primary-accent: #3E2723;
-    --secondary-accent: #C86D51;
+    --primary-accent: #403028;
+    --secondary-accent: #684A39;
     --bg-color: #FDFBF7;
     --card-bg: #FFFFFF;
-    --text-main: #2C221E;
-    --text-muted: #7A685D;
+    --text-main: #332C27;
+    --text-muted: #756A61;
     --border-color: #E6E2DF;
     --card-shadow: 0 10px 25px rgba(62, 39, 35, 0.08);
     --transition-speed: 0.2s;
