@@ -1,0 +1,377 @@
+/* ----------------------------------------------
+            CSS Variables & Reset
+------------------------------------------------ */
+:root {
+    --primary-accent: #3E2723;
+    --secondary-accent: #C86D51;
+    --bg-color: #FDFBF7;
+    --card-bg: #FFFFFF;
+    --text-main: #2C221E;
+    --text-muted: #7A685D;
+    --border-color: #E6E2DF;
+    --card-shadow: 0 10px 25px rgba(62, 39, 35, 0.08);
+    --transition-speed: 0.2s;
+}
+
+/* Reset & Base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Lora', serif;
+    color: var(--primary-accent);
+}
+
+a {
+    color: var(--secondary-accent);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color var(--transition-speed) ease;
+}
+
+a:hover {
+    color: var(--primary-accent);
+}
+
+/* ----------------------------------------------
+            Layout: Split Panels
+------------------------------------------------ */
+.split-layout {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Left Panel – Brand Image */
+.brand-panel {
+    flex: 1;
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.brand-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(62, 39, 35, 0.85), rgba(62, 39, 35, 0.65));
+    z-index: 1;
+}
+
+.brand-content {
+    position: relative;
+    z-index: 2;
+    color: var(--bg-color);
+    max-width: 400px;
+}
+
+.brand-content svg {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1.5rem;
+    fill: var(--secondary-accent);
+}
+
+.brand-content h1 {
+    color: var(--bg-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.brand-content p {
+    font-size: 1.125rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* Right Panel – Form */
+.form-panel {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.form-card {
+    background: var(--card-bg);
+    box-shadow: var(--card-shadow);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 440px;
+    padding: 2.5rem;
+}
+
+/* ----------------------------------------------
+            Tab Switcher
+------------------------------------------------ */
+.tab-switcher {
+    display: flex;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.tab-btn {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 0.75rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    position: relative;
+    transition: color var(--transition-speed) ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.tab-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--secondary-accent);
+    transform: scaleX(0);
+    transition: transform var(--transition-speed) ease;
+}
+
+.tab-btn.active {
+    color: var(--primary-accent);
+}
+
+.tab-btn.active::after {
+    transform: scaleX(1);
+}
+
+/* ----------------------------------------------
+            Form Views
+------------------------------------------------ */
+.form-view {
+    display: none;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+.form-view.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-header {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ----------------------------------------------
+            Floating Label Inputs
+------------------------------------------------ */
+.input-group {
+    position: relative;
+    margin-bottom: 1.25rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 1.25rem 1rem 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--text-main);
+    background-color: transparent;
+    transition: border-color var(--transition-speed) ease;
+}
+
+.input-group input::placeholder {
+    color: transparent;
+    /* needed for :placeholder-shown */
+}
+
+.input-group label {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    pointer-events: none;
+    transition: all var(--transition-speed) ease;
+    font-size: 1rem;
+}
+
+.input-group input:focus~label,
+.input-group input:not(:placeholder-shown)~label {
+    top: 0.6rem;
+    transform: translateY(0);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--secondary-accent);
+}
+
+/* Focus states */
+input:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--secondary-accent);
+    outline-offset: 2px;
+    border-color: var(--secondary-accent);
+}
+
+/* ----------------------------------------------
+            Form Options (checkbox & forgot)
+------------------------------------------------ */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    accent-color: var(--secondary-accent);
+    cursor: pointer;
+}
+
+/* ----------------------------------------------
+                    Buttons
+------------------------------------------------ */
+.btn-primary {
+    width: 100%;
+    padding: 0.875rem;
+    background-color: var(--primary-accent);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease, transform 0.1s ease;
+    font-family: inherit;
+}
+
+.btn-primary:hover {
+    background-color: #411212d7;
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+/* ----------------------------------------------
+            Social Auth & Divider
+------------------------------------------------ */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 1.5rem 0;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.divider::before {
+    margin-right: 1rem;
+}
+
+.divider::after {
+    margin-left: 1rem;
+}
+
+.social-auth {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-social {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-main);
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-social:hover {
+    background-color: #F8F5F1;
+    border-color: #D6D2CF;
+}
+
+.btn-social svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* ----------------------------------------------
+                Responsive
+------------------------------------------------ */
+@media (max-width: 768px) {
+    .brand-panel {
+        display: none;
+    }
+
+    .form-panel {
+        padding: 1rem;
+    }
+
+    .form-card {
+        padding: 2rem 1.5rem;
+    }
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Armin Cafe – Login &amp; Sign Up</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,500;0,600;1,400&display=swap"
+        rel="stylesheet" />
+
+<body>
+
+    <!-- ==================== MAIN LAYOUT ==================== -->
+    <main class="split-layout">
+
+        <!-- Left Brand Panel -->
+        <section class="brand-panel">
+            <div class="brand-overlay"></div>
+            <div class="brand-content">
+                <!-- Coffee Steam Icon -->
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M18 8H6V13C6 16.31 8.69 19 12 19C15.31 19 18 16.31 18 13V8ZM20 8H21C22.1 8 23 8.9 23 10C23 11.1 22.1 12 21 12H20V8ZM4 21H20V23H4V21ZM9 2C8.45 2 8 2.45 8 3C8 4.66 9.5 5.5 9.5 7H11.5C11.5 5.34 10 4.5 10 3C10 2.45 9.55 2 9 2ZM13 2C12.45 2 12 2.45 12 3C12 4.66 13.5 5.5 13.5 7H15.5C15.5 5.34 14 4.5 14 3C14 2.45 13.55 2 13 2Z" />
+                </svg>
+                <h1>Armin Cafe</h1>
+                <p>Expanded On The Gemeni Login Page</p>
+            </div>
+        </section>
+
+        <!-- Right Form Panel -->
+        <section class="form-panel">
+            <div class="form-card">
+
+                <!-- Tab Navigation -->
+                <nav class="tab-switcher" aria-label="Authentication Modes">
+                    <button class="tab-btn active" id="tab-login" onclick="toggleView('login')"
+                        aria-controls="view-login" aria-selected="true">Log In</button>
+                    <button class="tab-btn" id="tab-signup" onclick="toggleView('signup')" aria-controls="view-signup"
+                        aria-selected="false">Create Account</button>
+                </nav>
+
+                <!-- Login View -->
+                <div id="view-login" class="form-view active">
+                    <h2 class="form-header">Welcome back! Grab a seat.</h2>
+                    <form action="#" method="POST" novalidate>
+                        <fieldset style="border: none; padding: 0;">
+
+                            <div class="input-group">
+                                <input type="email" id="login-email" name="login-email" placeholder=" " required
+                                    autocomplete="email" />
+                                <label for="login-email">Email Address</label>
+                            </div>
+
+                            <div class="input-group">
+                                <input type="password" id="login-password" name="login-password" placeholder=" "
+                                    required autocomplete="current-password" />
+                                <label for="login-password">Password</label>
+                            </div>
+
+                            <div class="form-options">
+                                <label class="checkbox-group">
+                                    <input type="checkbox" name="remember-me" id="remember-me" />
+                                    Keep me signed in
+                                </label>
+                                <a href="#forgot">Forgot password?</a>
+                            </div>
+
+                            <button type="submit" class="btn-primary">Sign In</button>
+                        </fieldset>
+                    </form>
+
+                    <div class="divider">or continue with</div>
+
+                    <div class="social-auth">
+                        <button class="btn-social" type="button" aria-label="Sign in with Google">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                                    fill="#4285F4" />
+                                <path
+                                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                                    fill="#34A853" />
+                                <path
+                                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                                    fill="#FBBC05" />
+                                <path
+                                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                                    fill="#EA4335" />
+                            </svg>
+                            Google
+                        </button>
+                        <button class="btn-social" type="button" aria-label="Sign in with Apple">
+                            <svg viewBox="0 0 24 24" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.636 10.435c-.035-3.322 2.716-4.93 2.84-5.006-1.543-2.257-3.935-2.56-4.786-2.6-2.036-.206-3.978 1.197-5.01 1.197-1.033 0-2.645-1.163-4.32-1.13-2.188.033-4.205 1.272-5.33 3.23-2.27 3.934-.58 9.752 1.626 12.935 1.08 1.556 2.36 3.29 4.027 3.23 1.602-.066 2.215-1.04 4.14-1.04 1.916 0 2.476 1.04 4.147 1.007 1.705-.034 2.81-1.59 3.88-3.153 1.24-1.815 1.75-3.572 1.776-3.664-.04-.016-3.444-1.322-3.486-5.006zm-2.89-6.495c.89-1.077 1.488-2.576 1.324-4.07-.128.05-1.745.86-2.673 1.98-.824.996-1.53 2.52-1.334 3.985.163.1.18.118 1.734-.847z" />
+                            </svg>
+                            Apple
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sign Up View -->
+                <div id="view-signup" class="form-view">
+                    <h2 class="form-header">Join the Coffee Club</h2>
+                    <form action="#" method="POST" novalidate>
+                        <fieldset style="border: none; padding: 0;">
+
+                            <div class="input-group">
+                                <input type="text" id="signup-name" name="signup-name" placeholder=" " required
+                                    autocomplete="name" />
+                                <label for="signup-name">Full Name</label>
+                            </div>
+
+                            <div class="input-group">
+                                <input type="email" id="signup-email" name="signup-email" placeholder=" " required
+                                    autocomplete="email" />
+                                <label for="signup-email">Email Address</label>
+                            </div>
+
+                            <div class="input-group">
+                                <input type="password" id="signup-password" name="signup-password" placeholder=" "
+                                    required autocomplete="new-password" />
+                                <label for="signup-password">Password</label>
+                            </div>
+
+                            <div class="form-options">
+                                <label class="checkbox-group" style="margin-bottom: 0;">
+                                    <input type="checkbox" name="terms" id="terms" required />
+                                    <span>I agree to the <a href="#terms">Rewards Program Terms</a></span>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn-primary" style="margin-top: 1.5rem;">Create
+                                Account</button>
+                        </fieldset>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script>
+        function toggleView(viewName) {
+            // Update tab buttons
+            const loginTab = document.getElementById('tab-login');
+            const signupTab = document.getElementById('tab-signup');
+
+            // Remove active state from both tabs
+            loginTab.classList.remove('active');
+            signupTab.classList.remove('active');
+            loginTab.setAttribute('aria-selected', 'false');
+            signupTab.setAttribute('aria-selected', 'false');
+
+            // Set active on the clicked tab
+            const activeTab = document.getElementById(`tab-${viewName}`);
+            activeTab.classList.add('active');
+            activeTab.setAttribute('aria-selected', 'true');
+
+            // Update form views
+            const loginView = document.getElementById('view-login');
+            const signupView = document.getElementById('view-signup');
+
+            loginView.classList.remove('active');
+            signupView.classList.remove('active');
+
+            const activeView = document.getElementById(`view-${viewName}`);
+            activeView.classList.add('active');
+        }
+    </script>
+
+</body>
+
+</html>
